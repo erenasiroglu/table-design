@@ -1,0 +1,126 @@
+body {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .title {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .table-preview-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    object-fit: fill;
+  }
+  
+  .table-preview {
+    border: 4px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: fill;
+  }
+  
+  .table-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: fill;
+  }
+  
+  .table-creation-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 60px;  
+    object-fit: fill;
+  }
+  
+  .table-options {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  .table-color-picker, .table-image-picker, .table-size-picker {
+    margin-bottom: 20px;
+  }
+  
+  .color-options {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .color-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .color-button.black {
+    background-color: black;
+  }
+  
+  .color-button.white {
+    background-color: white;
+    border: 1px solid #ccc;
+  }
+  
+  .color-button.brown {
+    background-color: #8b4513;
+  }
+  
+  .file-input-container {
+    position: relative;
+  }
+  
+  #file-input {
+    display: none;
+  }
+  
+  .custom-file-input {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .custom-file-input:hover {
+    background-color: #0056b3;
+  }
+  
+  .order-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .order-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .order-button:hover {
+    background-color: #0056b3;
+  }
+  

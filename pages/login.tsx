@@ -1,4 +1,3 @@
-// login.tsx
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import "../src/app/styles/login.css";
@@ -15,7 +14,7 @@ export const Login: React.FC = () => {
     e.preventDefault();
 
     if (email === "test@example.com" && password === "password") {
-      router.push("/dashboard");
+      router.push("/");
     } else {
       setError("Invalid email or password");
     }
