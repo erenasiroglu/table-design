@@ -1,0 +1,166 @@
+.loginContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  overflow: hidden;
+  @media screen and (max-width: 768px) {
+    background: #fff;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loginImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.loginFormContainer {
+  background: #fff;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  padding: 20px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.loginForm h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(50deg, #00993f 0%, #00874a 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.loginForm label {
+  margin-bottom: 10px;
+  width: 250px;
+  color: rgb(154, 160, 171);
+  font-size: 12px;
+}
+
+.loginForm input {
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid rgb(189, 191, 197);
+}
+
+.loginForm input:focus {
+  outline: none;
+  border: 1px solid #00674a;
+}
+
+.loginForm button {
+  width: 150px;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  background-size: 300% 300%;
+  background-image: linear-gradient(90deg, #00993f, #00674a, #00993f, #00674a);
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.loginForm button:hover {
+  background-position: 100% 50%;
+}
+
+.errorMessage {
+  color: red;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.signupText {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.signupLink {
+  color: #00674a;
+  cursor: pointer;
+}
+
+.signupLink:hover {
+  color: #00593f;
+}
+
+
+.googleSignIn {
+  width: 200px !important;
+  padding: 10px 20px !important;
+  color: black !important;
+  border: none !important;
+  border-radius: 5px !important;
+  cursor: pointer;
+  display: flex;
+  background-image: none !important;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px !important;
+  background-color: #fff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+}
+
+.googleSignIn:hover {
+  background-color: #00674a;
+}
+
+.googleIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
