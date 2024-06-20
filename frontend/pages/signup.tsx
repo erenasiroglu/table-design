@@ -31,7 +31,7 @@ export const SignUp: React.FC = () => {
           setError(data.error || "Sign-up failed");
         }
       } catch (error) {
-        setError("An error occurred. Please try again later.");
+        setError("Please try again later.");
       }
     } else {
       setError("Please fill out all fields");
@@ -39,7 +39,7 @@ export const SignUp: React.FC = () => {
   };
 
   const handleGoogleSignUp = () => {
-    window.location.href = "http://localhost:5000/auth/google";
+    window.location.href = "http://localhost:5000/auth/google"; // Backend URL'si
   };
 
   return (

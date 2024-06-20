@@ -30,7 +30,7 @@ export const Login: React.FC = () => {
         setError(data.error || "Invalid email or password");
       }
     } catch (error) {
-      setError("An error occurred. Please try again later.");
+      setError("Please try again later.");
     }
   };
 

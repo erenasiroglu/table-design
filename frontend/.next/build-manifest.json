@@ -25,11 +25,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/kendi-tablonuzu-olusturun": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/kendi-tablonuzu-olusturun.js"
-    ],
     "/login": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
