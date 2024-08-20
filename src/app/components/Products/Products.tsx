@@ -1,27 +1,53 @@
-import React from "react";
-import "./styles.css";
+"use client";
 
-const productsData = [
-  { id: 1, name: "Ürün 1", price: 100, image: "ürün1.jpg" },
-  { id: 2, name: "Ürün 2", price: 150, image: "ürün2.jpg" },
-  { id: 3, name: "Ürün 3", price: 200, image: "ürün3.jpg" },
-  { id: 4, name: "Ürün 4", price: 120, image: "ürün4.jpg" },
-  { id: 5, name: "Ürün 5", price: 180, image: "ürün5.jpg" },
-  { id: 6, name: "Ürün 6", price: 220, image: "ürün6.jpg" },
-];
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import Image from "next/image";
+import styles from "./Products.module.css";
 
-export const Products: React.FC = () => {
+interface Product {
+  id: number;
+  title: string;
+  subtitle: string;
+  image: string;
+}
+
+export const Products = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/products")
+      .then((response) => {
+        setProducts(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching products:", error);
+      });
+  }, []);
+
   return (
-    <div className="products-container">
-      <div className="products-grid">
-        {productsData.map((product) => (
-          <div key={product.id} className="product-item">
-            <h3>{product.name}</h3>
-            <p>${product.price}</p>
-            <a href={`/product/${product.id}`}>Detaylar</a>
-          </div>
-        ))}
-      </div>
+    <div className={styles.products}>
+      <h2>Products</h2>
+      {products.length > 0 ? (
+        <div className={styles.productList}>
+          {products.map((product) => (
+            <div key={product.id} className={styles.productItem}>
+              <Image
+                src={product.image}
+                alt={product.title}
+                width={200}
+                height={200}
+                className={styles.productImage}
+              />
+              <h3 className={styles.productTitle}>{product.title}</h3>
+              <p className={styles.productSubtitle}>{product.subtitle}</p>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p>Loading products...</p>
+      )}
     </div>
   );
 };

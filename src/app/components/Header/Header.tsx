@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
         <ul>
           <li>
             <Link href="/login">
-              <HiUser size={24} />
+              <HiUser size={24} color="#000" />
             </Link>
           </li>
           <div className={styles.cta}>
